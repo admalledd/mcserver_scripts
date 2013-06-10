@@ -1,0 +1,10 @@
+# A simple backup implementation
+do save-all
+do save-off
+
+#note: ##($RECONFIG) edit to correct master_backup.sh for the server due to multihosting blah blah.
+execWait /home/admalledd/minecraft/cur/sh/master_backup.sh
+
+do save-on
+do save-all
+

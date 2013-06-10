@@ -1,0 +1,19 @@
+# +----------------> Minute
+# |    +--------------> Hour
+# |    |    +------------> Day of month
+# |    |    |    +----------> Month
+# |    |    |    |    +--------> Day of week
+# |    |    |    |    |     +--> Script/File
+# |    |    |    |    |     | 
+# *    *    *    *    *     uname.scc
+#say basic server admin-y stuff
+  */15 *    *    *    *     sayadmin-y.scc
+#backup every 30 minutes, also do map render?
+  45   *    *    *    *     backup.scc
+#warn of back up 15 minutes before it occurs:
+  45   4    *    *    *     warnbackup15.scc
+  50   4    *    *    *     warnbackup10.scc
+  55   4    *    *    *     warnbackup5.scc
+  59   4    *    *    *     warnbackup1.scc
+#do restart:
+  0    5    *    *    *     restart.scc

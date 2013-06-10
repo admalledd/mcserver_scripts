@@ -1,0 +1,6 @@
+# Example Script
+# A simple backup implementation
+do say good bye! server restarting be back in a tick (5 minutes)
+do save-all
+#note: ##($RECONFIG) edit to correct restart.sh for the server path, multihosting blah blah
+exec /home/admalledd/minecraft/cur/sh/restart.sh
