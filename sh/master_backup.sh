@@ -9,5 +9,5 @@ echo $(date) >>$log
 
 #current server path:
 CUR=$($(dirname $0)/curserverpath.sh)
-
-rdiff-backup -v6 $CUR /home/$USER/minecraft/backup/ >> $log
+#note: ##($RECONFIG) change to backup-dir needed for this server number wrt multihosting
+rdiff-backup -v6 $CUR /home/$USER/minecraft/backup.server2/ >> $log
