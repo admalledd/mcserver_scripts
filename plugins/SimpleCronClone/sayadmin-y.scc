@@ -1,6 +1,6 @@
 #max chars is 255 for any command (logblock limmitation?) no typing past colum 255 therefor for safty please.
 
-do say 1.5.2 dev build in use, email admalledd+mc@gmail.com for issues.  §dserver donation info: §2http://www.admalledd.com/mc/
+do say 1.6.2 dev build in use, email admalledd+mc@gmail.com for issues.  §dserver donation info: §2http://www.admalledd.com/mc/
 
 execWait /home/admalledd/minecraft/cur/sh/status.py
 do say §cserver in SEMI-AUTO, §estatus: §b$?
