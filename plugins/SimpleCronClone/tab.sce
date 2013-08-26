@@ -1,22 +1,41 @@
-#list of event then file to run when that event occurs
-#PS: spaces in the file name are a bad idea mmkay?
+playerJoin:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
-#because im crazy, log every event for later GREP usage.
+playerFirstJoin:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
-playerJoin          events/allevents.sce
+playerQuit:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
-playerFirstJoin     events/allevents.sce
+serverEmpty:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
-playerQuit          events/allevents.sce
+serverNotEmpty:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
+playerTeleportWorld:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
-serverEmpty         events/allevents.sce
+worldEmpty:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
-serverNotEmpty      events/allevents.sce
+worldNotEmpty:
+    - command: 'do adm_log allevents::$0:::$1::$2::$3'
 
+hourChange:
+#    - command: 'do say allevents:::$0:$1:$2'
 
-playerTeleportWorld events/allevents.sce
+dawn:
+#    - command: 'do say allevents:::$0:$1'
 
-worldEmpty          events/allevents.sce
+midday:
+#    - command: 'do say allevents:::$0:$1'
 
-worldNotEmpty       events/allevents.sce
+dusk:
+#    - command: 'do say allevents:::$0:$1'
+
+night:
+#    - command: 'do say allevents:::$0:$1'
+
+midnight:
+#    - command: 'do say allevents:::$0:$1'
