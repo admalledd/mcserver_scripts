@@ -1,0 +1,78 @@
+settings:
+    #NOTE: world config is currently TODO!
+    worlds:
+        #world name, then world settings. must include all worlds in a world group.
+        dragon_lands:
+            regen: false            #regen on startup if true, on cmd if false
+            per_player: false       #new world per player (not recomended!)
+            portal_target: true     #the world that the teleport command takes you to (at spawn for that world, note)
+        dragon_lands_the_nether:
+            regen: false
+            per_player: false
+            portal_target: false
+        dragon_lands_the_end:
+            regen: false
+            per_player: false
+            portal_target: false
+    respawn:
+        world_name: kobold
+        spawn_at_loc: false
+        x: 92.5
+        y: 62
+        z: 114.5
+    guide:
+        itemMaterial: EYE_OF_ENDER #381 is eye of ender, -1 for only on cmd. Mutually exclusive
+        show_distance: true
+        show_angle: true
+        fudge_distance_percent: 0 #random percentage to fudge by. +- this percent ::mesure = mesure*(1+random.randfloat(-fudge,fudge))
+        fudge_angle_percent: 0 #random percentage to fudge by.
+        cool_down: 0 #<= 0 for no cool down, time is in seconds.
+        active_world_name: kobold #name of the world that the hole in the world exists/what world the guide works
+    zone:
+        cmd_activate: true #if true, base command activates and /tp's you.
+        item_activate: false # if true, "using" the guide item will teleport you
+        size: 32 # radius from center of zone that the command/item will be able to teleport you (size of the "hole in the world")
+        spawn_radius_max: 9001 #how far from 0x,0z for the center of the zone to spawn.
+        spawn_radius_min: 1000 #zone spawns at least this far away from spawn
+        regen_timeout: 120 #how many seconds until we re-generate the zone AND the worlds(!) 
+
+strings:
+    toofar:
+        - string: "Still much to far for me to work my magics and fling you to another world."
+    teleport:
+        - string: "you have entered another world..."
+    intros:
+        - string: "Free me, I am one of the lost souls. Take me to the hole in the world, in return I will show you the way to the land of Dragons."
+    directions:
+        #(should we also return the degrees? rounded to nearest 10 ofc)
+
+        - string:  "Even the youngling cephalopods know better how to navigate!"
+          min: -45
+          max: 45
+        - string:  "If it was not for the powers of the Gates you would never find your home would you?"
+          min: -90
+          max: 90
+        - string:  "You are so lost... You are looking AWAY from the hole in the world!"
+          min: -160
+          max: 160
+        - string:  "Close enough, but if you want to be closer turn slightly"
+          min: -20
+          max: 20
+
+    distance:
+        #(Includes "range" that said prediction is for)
+        - string:  "We are further than the distance between the Foxcat00 kingdom to the Deamon mountain Tulivour."
+          min: 5000
+          max: 25000
+        - string:  "Still far away, about as far as the adventurers of old could travel in a few days."
+          min: 2000
+          max: 5000
+        - string:  "Not too much further, less than the distance the path of destruction the War Of The Wizards made in the lands of OldHome"
+          min: 1000
+          max: 2000
+        - string:  "I can feel it, the moving Hole in the World. Less than the width of the Hall of The Withered Warriors to go now."
+          min: -1
+          max: 1000
+    lore:
+        - string: "Long ago there was only the one world, you might know it now as OldHome. When the worlds were shattered in the Great Experiments we lost the way to OldHome."
+        - string: "We were young then, when the hollow volcano spak forth fire and the wizards wroght destruction and currupted the world."

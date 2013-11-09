@@ -1,0 +1,7 @@
+name: DragonLands
+main: pyplugin
+version: 0.1-dev
+commands:
+    dragon:
+        description: base command for DragonLands. without arguments teleports to the new world
+        usage: /<command>
