@@ -1,0 +1,59 @@
+settings:
+    respawn:
+        world_name: main
+    guide:
+        show_distance: true
+        show_angle: true
+        fudge_distance_percent: 0 #random percentage to fudge by. +- this percent ::mesure = mesure*(1+random.randfloat(-fudge,fudge))
+        fudge_angle_percent: 0 #random percentage to fudge by.
+        cool_down: 0 #<= 0 for no cool down, time is in seconds.
+        active_world_name: main #name of the world that the hole in the world exists/what world the guide works
+    zone:
+        size: 32 # radius from center of zone that the command/item will be able to teleport you (size of the "hole in the world")
+        spawn_radius_max: 9001 #how far from 0x,0z for the center of the zone to spawn.
+        spawn_radius_min: 1000 #zone spawns at least this far away from spawn
+
+strings:
+    #substrings have to be keyname'd "string" because of stupid bukkit configsection reasons. I want to hurt the person who wrote those docs...
+    toofar:
+        - string: "Still much to far for me to work my magics and fling you to another world."
+    teleport:
+        - string: "you have entered another world..."
+        - string: "looks like you can teleport properly after all!"
+    directions:
+        #Note, must have full range available (-180,180) else we crash without them sometimes (duh)
+
+        - string:  "Even the youngling cephalopods know better how to navigate!"
+          min: -45
+          max: 45
+        - string:  "If it was not for the powers of the Gates you would never find your home would you?"
+          min: -90
+          max: 90
+        - string:  "You are so lost... You are looking AWAY from the hole in the world!"
+          min: -180
+          max: 180
+        - string:  "Close enough, but if you want to be closer turn slightly"
+          min: -20
+          max: 20
+
+    distances:
+        #(Includes "range" that said prediction is for)
+        #note: if player is outside the possible range here the plugin will fail, hence the few min/max that have high maxes
+        - string: "Very far, beyond even the sane borders of the world"
+          min: 7500
+          max: 250000
+        - string:  "We are further than the distance between the Foxcat00 kingdom to the Deamon mountain Tulivour."
+          min: 5000
+          max: 8000
+        - string:  "Still far away, about as far as the adventurers of old could travel in a few days."
+          min: 2000
+          max: 5000
+        - string:  "Not too much further, less than the distance the path of destruction the War Of The Wizards made in the lands of OldHome"
+          min: 1000
+          max: 2000
+        - string:  "I can feel it, the moving Hole in the World. Less than the width of the Hall of The Withered Warriors to go now."
+          min: -1
+          max: 1000
+    lore:
+        - string: "Long ago there was only the one world, you might know it now as OldHome. When the worlds were shattered in the Great Experiments we lost the way to OldHome."
+        - string: "Distances don't mean much to you any more do they? With all the magics that flowed through since the War of The Wizards you travel so much more but see so little."

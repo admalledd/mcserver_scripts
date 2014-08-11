@@ -1,0 +1,7 @@
+name: DragonLands
+main: com.admalledd.bukkit.DragonLands.DragonLands
+version: 0.3
+commands:
+  dragon:
+    description: "Main command, teleports you to dragon lands (if arguments, more stuff might happen as well)"
+    usage: /dragon

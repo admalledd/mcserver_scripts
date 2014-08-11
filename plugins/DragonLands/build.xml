@@ -1,0 +1,34 @@
+<project name="DragonLands" default="dist" basedir=".">
+	<property name="pluginname" value="DragonLands"/>
+	<property name="bukkit.jar" location="/home/admalledd/workspace/org.bonsaimind.bukkitplugins/lib/bukkit.jar"/>
+
+	<property name="src" location="src"/>
+	<property name="build" location="build"/>
+	<property name="dist" location="dist"/>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${build}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" includeantruntime="false" source="1.6" debug="true">
+			<classpath>
+				<pathelement location="${bukkit.jar}"/>
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name="dist" depends="compile">
+		<mkdir dir="${dist}"/>
+		<jar jarfile="dist/DragonLands.jar"  basedir="${build}">
+			<fileset dir="src" includes="**/*.java **/*.class" />
+			<fileset file="./plugin.yml"/>
+			<fileset file="./config.yml"/>
+		</jar>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+	</target>
+</project>
