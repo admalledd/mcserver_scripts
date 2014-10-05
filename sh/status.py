@@ -2,7 +2,7 @@
 
 """
 Partly taken from the Portal ARG
-http://portalwiki.net/index.php/BBS_Resources_List
+https://web.archive.org/web/20110316085023/http://portalwiki.net/index.php/BBS_Resources_List
 """
 
 import random
