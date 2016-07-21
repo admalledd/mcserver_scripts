@@ -30,6 +30,7 @@ _messages = [
     'i am on fire, help!',
     'alan please insert message',
     'generic error message',
+    'could not validate humanity',
     'delivery path not greasy enough manual intervention required',
     'you have not enough vespene gas',
     'we require more minerals',
